@@ -17,7 +17,7 @@ Minst Training and the model is define in the Link (example computer vision mode
 
 ## How Does the Simulated AI Chip (DUT) Work?
 
-Imagine that instead of building an expensive physical chip, we write a C++ program that "mimics" exactly how that chip would behave. This is like an architect creating a 3D model of a house on a computer before actually building it. It allows to find design issues earlier and more cheaply.
+Imagine that instead of building an expensive physical chip, I write a C++ program that "mimics" exactly how that chip would behave. This is like an architect creating a 3D model of a house on a computer before actually building it. It allows to find design issues earlier and more cheaply.
 
 My simulated chip is designed to be extremely fast and power-efficient, so it has two key characteristics:
 
@@ -42,8 +42,8 @@ This process is like repainting a photo with millions of colors using only a 256
 The most common operation in AI is multiplying a series of numbers and then adding them all together. Our C++ "chip" simulates a specialized hardware block to do exactly this.
 
 - **Inputs (`Input` and `Weight`):** These are `int8_t` integers (the result of quantization).
-- **Multiplication (`*`):** When two `int8_t` numbers are multiplied, the result can be larger, so we need a bigger "box" to hold it, which is an `int16_t`.
-- **Addition (`+`):** When we add hundreds of these multiplication results together, the total sum can become very large. We need a huge "bucket" to ensure the number doesn't overflow, which is an `int32_t`.
+- **Multiplication (`*`):** When two `int8_t` numbers are multiplied, the result can be larger, so I need a bigger "box" to hold it, which is an `int16_t`.
+- **Addition (`+`):** When I add hundreds of these multiplication results together, the total sum can become very large. I need a huge "bucket" to ensure the number doesn't overflow, which is an `int32_t`.
 
 A diagram of this simulated architecture is as follows:
 
@@ -63,7 +63,7 @@ Accumulator <-(+) -----Addition----- Previous Accumulation
 ```
 Simulating these data sizes (`int8_t`, `int16_t`, `int32_t`) precisely is critical to ensure our C++ program behaves exactly like a real chip.
 
-## Why Do we Need Both a DUT and a Golden Model?
+## Why Do I Need Both a DUT and a Golden Model?
 
 To verification
 
@@ -123,10 +123,9 @@ To verification
     ```
     This command will create a `cnn_dut_module.so` file (or `.pyd` on Windows) inside the `build/` directory.
 
-4.  **Copy file to python_testbench model:**
-    ```bash
-    python python_testbench/run_test.py
-    ```
+4.  **Copy the file mnist_cnn.h5 to python_testbench folder:**
+    access to [Model_parameter](https://drive.google.com/file/d/1OuxesB2e50_5x-yAT4WKmyGOvrypqb4k/view?usp=sharing).
+
     The first time you run this, it will take a few minutes to train the model (if you dont' requirement mnist_cnn.h5). Subsequent runs will automatically load the saved model.
 
 
