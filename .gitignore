@@ -1,0 +1,41 @@
+# C++ build artifacts
+build/
+*.o
+*.so
+*.a
+*.out
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+.env
+venv/
+.venv/
+.pytest_cache/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Project specific
+*.h5
+*.log
+*.txt.user
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# OS specific
+.DS_Store
+.directory
+Thumbs.db

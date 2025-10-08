@@ -1,0 +1,5 @@
+tensorflow
+numpy
+pybind11
+streamlit
+matplotlib
