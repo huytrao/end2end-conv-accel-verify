@@ -4,7 +4,7 @@
 
 This project simulates the verification process of an AI "chip" (Device Under Test - DUT), written in C++, by comparing its results against a "Golden Model" written in Python.
 
-Minst Training Link (example model for testing): [Google Colab](https://colab.research.google.com/drive/1KsgzXknRXHkg0Nan6ViOg_8l6MMmQy7X)
+Minst Training and the model is define in the Link (example computer vision model for testing): [Google Colab](https://colab.research.google.com/drive/1KsgzXknRXHkg0Nan6ViOg_8l6MMmQy7X)
 
 ## Structure
 
